@@ -94,13 +94,13 @@ def getdata(words):
         hub_button.click()
         time.sleep(1)
 
-        rewards_button = waitUntil(xpath='div[2]/div[3]/div/div[1]/div/div[7]/button', time=5, driver=driver)
+        rewards_button = waitUntil(xpath='div[2]/div[3]/div/div[1]/div/div[7]/button', time=30, driver=driver)
         rewards_button.click()
         time.sleep(3)
 
-        claim_ticket = waitUntil(xpath='div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/button', time=30, driver=driver)
-        claim_ticket.click()
-        time.sleep(3)
+        # claim_ticket = waitUntil(xpath='div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/button', time=30, driver=driver)
+        # claim_ticket.click()
+        # time.sleep(3)
 
         time.sleep(3)
         log = open('log.txt', mode='a')
