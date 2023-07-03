@@ -98,7 +98,7 @@ def getdata(words):
         rewards_button.click()
         time.sleep(3)
 
-        claim_ticket = waitUntil(xpath='div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/button', time=5, driver=driver)
+        claim_ticket = waitUntil(xpath='div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/button', time=30, driver=driver)
         claim_ticket.click()
         time.sleep(3)
 
