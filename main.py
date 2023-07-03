@@ -122,5 +122,5 @@ if __name__ == '__main__':
             mnemo = Mnemonic("english")
             words = mnemo.generate(strength=128)
             mnems.append(words)
-            p = Pool(processes=threads_num)
-            p.map(getdata, mnems)
+        p = Pool(processes=threads_num)
+        p.map(getdata, mnems)
