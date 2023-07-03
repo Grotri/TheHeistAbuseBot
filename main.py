@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from mnemonic import Mnemonic
 from multiprocessing import Pool
 
-
+# TODO: FIX ME
 def getdata(words):
     try:
         options = Options()
