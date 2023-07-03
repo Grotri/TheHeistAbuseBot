@@ -113,15 +113,14 @@ def getdata(words):
         driver.quit()
 
 
-total_tickets = int(input("Enter number of total tickets to process: "))
-threads_num = int(input("Enter number of treads: "))
-mnems = []
-
-for i in range(1, math.ceil(total_tickets / threads_num)):
-    for j in range(1, threads_num):
-        mnemo = Mnemonic("english")
-        words = mnemo.generate(strength=128)
-        mnems.append(words)
-    if __name__ == '__main__':
-        p = Pool(processes=threads_num)
-        p.map(getdata, mnems)
+if __name__ == '__main__':
+    total_tickets = int(input("Enter number of total tickets to process: "))
+    threads_num = int(input("Enter number of treads: "))
+    mnems = []
+    for i in range(1, math.ceil(total_tickets / threads_num)):
+        for j in range(1, threads_num):
+            mnemo = Mnemonic("english")
+            words = mnemo.generate(strength=128)
+            mnems.append(words)
+            p = Pool(processes=threads_num)
+            p.map(getdata, mnems)
